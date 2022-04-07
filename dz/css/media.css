@@ -240,6 +240,25 @@
         width: 134px;
         margin: 0 auto 25px;
     }
+    /* header */
+    .header {
+        height: 56px;
+    }
+    .header .container {
+        padding-left: 16px;
+        position: relative;
+    }
+    .header__logo img {
+        width: 64.81px;
+        height: 22.92px;
+    }
+    .header__menu {
+        display: none;
+    }
+    .hidden-menu {
+        display: block;
+    }
+
     /* banner */
     .banner {
         height: 949px;
@@ -278,6 +297,7 @@
     .banner__form-wrap {
         margin: 0 auto;
         height: 381px;
+        z-index: 2;
     }
     .banner__form-wrap h4 {
         font-size: 14px;

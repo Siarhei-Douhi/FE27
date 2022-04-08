@@ -190,41 +190,41 @@ input::-moz-placeholder {
     transform: translateY(-50%);
 }
 .ln4 {bottom: 0px; right: 0;}
-.list a {
-    display: block;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    font-size: inherit;
-    line-height: inherit;
-    color: #FFFFFF;
-    margin: 0 auto 55px;
-    cursor: pointer;
-    transition: 5s ease;
-}
-.list {
-    position: absolute;
-    top: 0;
-    max-height: 0;
-    font-size: 0;
-    transition: 5s ease;
-}
 .nav-toggle {
-    display: none;
+    display: block;
     position: absolute;
     left: 0;
     bottom: 0;
-    height: 949px;
+    height: 0;
+    font-size: 0;
     width: 100%;
     transform: translateY(100%);
     margin: 0 auto;
-    padding-top: 50px;
     background: rgba(0, 0, 0, 0.5) url(../image/banner.png);
     background-blend-mode: overlay;
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
 }
-.check-menu:checked ~ .nav-toggle {display: block;}
+.nav-toggle ul {
+    padding-top: 60px;
+}
+.nav-toggle ul li a {
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    font-size: inherit;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin: 0 auto 50px;
+    height: 40px;
+}
+.check-menu:checked ~ .nav-toggle {
+    height: 949px;
+    font-size: 14px;
+    transition: font-size 1.5s ease;
+}
 .check-menu:checked + .burger-menu .ln1,
 .check-menu:checked + .burger-menu .ln4 {
     width: 0;
@@ -232,11 +232,7 @@ input::-moz-placeholder {
 }
 .check-menu:checked + .burger-menu .ln2 {transform: rotate(45deg);}
 .check-menu:checked + .burger-menu .ln3 {transform: rotate(-45deg);}
-.check-menu:checked ~ .nav-toggle .list {
-    max-height: 513px;
-    font-size: 14px;
-    transition: 3s ease;
-}
+
 
 /*SECTION BANNER*/
 .banner {

@@ -155,6 +155,7 @@ input::-moz-placeholder {
     line-height: 19px;
     color: #FFFFFF;
 }
+
 .header__menu li a:hover {
     background: #EC7979;
 }
@@ -210,6 +211,7 @@ input::-moz-placeholder {
     padding-top: 60px;
 }
 .nav-toggle ul li a {
+    position: relative;
     text-align: center;
     display: inline-flex;
     align-items: center;
@@ -220,15 +222,43 @@ input::-moz-placeholder {
     margin: 0 auto 50px;
     height: 40px;
 }
+.nav-toggle a:after {
+    content: "";
+    display: block;
+    clear: both;
+    width: 100%;
+    height: 2px;
+    background-color: #EC7979;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.nav-toggle a::before {
+    content: "";
+    display: block;
+    clear: both;
+    width: 100%;
+    height: 2px;
+    background-color: #EC7979;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 .check-menu:checked ~ .nav-toggle {
     height: 949px;
     font-size: 14px;
-    transition: font-size 1.5s ease;
+    transition: font-size 0.7s ease;
+}
+.check-menu:checked ~ .nav-toggle a:after,
+.check-menu:checked ~ .nav-toggle a:before {
+    width: 0;
+    transition: 0.7s ease 0.3s;
 }
 .check-menu:checked + .burger-menu .ln1,
 .check-menu:checked + .burger-menu .ln4 {
     width: 0;
-    background-color:#AB4949
+    background-color:#AB4949;
 }
 .check-menu:checked + .burger-menu .ln2 {transform: rotate(45deg);}
 .check-menu:checked + .burger-menu .ln3 {transform: rotate(-45deg);}

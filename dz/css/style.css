@@ -178,6 +178,7 @@ input::-moz-placeholder {
     z-index: 2;
 }
 .burger-line {
+    display: block;
     position: absolute;
     background-color: white;
     width: 100%;
